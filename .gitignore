@@ -1,0 +1,9 @@
+node_modules
+dist
+build
+.DS_STORE
+*.log*
+/.eslintcache
+.idea
+.vscode
+package-lock.json

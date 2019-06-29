@@ -1,0 +1,20 @@
+{
+  "name": "monorepo_setup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/benn983/monorepo_setup.git",
+  "author": "Andrea Benato <benato.andrea98@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "build": "lerna run build",
+  "test": "echo test",
+  "bootstrap": "yarn install && lerna bootstrap",
+  "release": "lerna run release",
+  "publish": "lerna publish --skip-npm",
+  "devDependencies": {
+    "lerna": "^3.15.0"
+  }
+}
