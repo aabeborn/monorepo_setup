@@ -28,6 +28,7 @@ jobs:
         skip_cleanup: true
         on: 
           tags: true
-          condition: "$TRAVIS_TAG =~ ^@grimtim\/prova"
+         
+        
       
 
