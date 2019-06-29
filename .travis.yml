@@ -24,7 +24,7 @@ jobs:
     - stage: deploy ui
       deploy: 
         provider: script
-        script: echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null && yarn run release
+        script: echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null && yarn run release && npm publish build
         skip_cleanup: true
         on: 
           tags: true

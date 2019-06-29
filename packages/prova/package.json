@@ -30,7 +30,7 @@
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=production babel --config-file ./scripts/babel.config.js src --out-dir ./build --ignore \"**/*.test.js\" ",
     "build:umd": "cross-env NODE_ENV=production BABEL_ENV=production rollup -c scripts/rollup.config.js",
     "build": "yarn run clean && yarn run build:es && yarn build:umd",
-    "release": "yarn run build && npm publish build"
+    "release": "yarn run build"
   },
   "peerDependencies": {
     "react": "^16.8.6",
