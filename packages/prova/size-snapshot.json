@@ -1,0 +1,7 @@
+{
+  "build/umd/beatybeat-ui.min.js": {
+    "bundled": 690,
+    "minified": 441,
+    "gzipped": 293
+  }
+}

@@ -9,12 +9,15 @@
   "workspaces": [
     "packages/*"
   ],
-  "build": "lerna run build",
-  "test": "echo test",
-  "bootstrap": "yarn install && lerna bootstrap",
-  "release": "lerna run release",
-  "publish": "lerna publish --skip-npm",
+  "scripts": {
+    "build": "lerna run build",
+    "test": "echo test",
+    "bootstrap": "yarn install && lerna bootstrap",
+    "release": "lerna run release",
+    "publish": "lerna publish --skip-npm"
+  },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "lerna": "^3.15.0"
   }
 }
