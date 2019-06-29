@@ -1,0 +1,33 @@
+language: node_js
+node_js:
+  - "11.15"
+cache: 
+  yarn: true
+  
+env:
+  global:
+    - PATH=$HOME/.yarn/bin:$PATH
+
+before_install: 
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+
+install:
+  #build runner
+  - yarn run bootstrap
+
+jobs:
+  include:
+    - stage: test
+      script: yarn run test
+    - stage: build
+      script: yarn run build 
+    - stage: deploy ui
+      deploy: 
+        provider: script
+        script: echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" >> $HOME/.npmrc 2> /dev/null && yarn run release
+        skip_cleanup: true
+        on: 
+          tags: true
+          condition: "$TRAVIS_TAG =~ ^@grimtim\/prova"
+      
+
