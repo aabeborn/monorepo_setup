@@ -13,7 +13,8 @@ before_install:
   
 
 install:
-  - ls && cp npm.release $HOME/.npmrc && npm adduser && npm whoami
+  - cp npm.release $HOME/.npmrc
+  - npm whoami
   #build runner
   - yarn run bootstrap
 
