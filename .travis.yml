@@ -27,7 +27,7 @@ jobs:
     - stage: deploy ui
       deploy: 
         provider: script
-        script: npm whoami && yarn run release && npm publish build
+        script: npm whoami && yarn run release
         skip_cleanup: true
         # on: 
         #   tags: true
