@@ -5,8 +5,6 @@
   "author": "Andrea Benato <benato.andrea98@gmail.com>",
   "homepage": "https://github.com/benn983/monorepo_setup#readme",
   "license": "MIT",
-  "main": "build/index.js",
-  "module": "build/index.js",
   "directories": {
     "lib": "build",
     "test": "__tests__"
@@ -30,7 +28,7 @@
     "build:es": "cross-env NODE_ENV=production BABEL_ENV=production babel --config-file ./scripts/babel.config.js src --out-dir ./build --ignore \"**/*.test.js\" ",
     "build:umd": "cross-env NODE_ENV=production BABEL_ENV=production rollup -c scripts/rollup.config.js",
     "build": "yarn run clean && yarn run build:es && yarn build:umd",
-    "release": "yarn run build"
+    "release": "yarn run build && node ./scripts/copy_files.js"
   },
   "peerDependencies": {
     "react": "^16.8.6",

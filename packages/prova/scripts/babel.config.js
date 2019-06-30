@@ -14,7 +14,6 @@ module.exports = {
     'babel-plugin-transform-dev-warning',
     'babel-plugin-optimize-clsx',
     ['@babel/plugin-proposal-class-properties', { loose: true }],
-    ['@babel/plugin-proposal-object-rest-spread', { loose: true }],
-    ['@babel/plugin-transform-runtime', { corejs: 3 }]
+    ['@babel/plugin-proposal-object-rest-spread', { loose: true }]
   ]
 };
