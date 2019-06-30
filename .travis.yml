@@ -13,20 +13,20 @@ before_install:
   
 
 install:
-  - ls && cp npm.release $HOME/.npmrc
+  - ls && cp npm.release $HOME/.npmrc && npm adduser && npm whoami
   #build runner
   - yarn run bootstrap
 
 jobs:
   include:
-    - stage: test
-      script: yarn run test
-    - stage: build
-      script: yarn run build 
+    # - stage: test
+    #   script: yarn run test
+    # - stage: build
+    #   script: yarn run build 
     - stage: deploy ui
       deploy: 
         provider: script
-        script: npm whoami && yarn run release && yarn publish build
+        script: npm whoami && yarn run release && npm publish build
         skip_cleanup: true
         # on: 
         #   tags: true
