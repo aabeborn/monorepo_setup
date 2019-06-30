@@ -13,7 +13,7 @@ before_install:
   
 
 install:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_AUTH_TOKEN}" > .npmrc
+  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > .npmrc
   - npm whoami
   #build runner
   - yarn run bootstrap
