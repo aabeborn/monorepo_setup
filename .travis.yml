@@ -26,10 +26,10 @@ jobs:
     - stage: deploy ui
       deploy: 
         provider: script
-        script: yarn run release && npm publish build
+        script: npm whoami && yarn run release && npm publish build
         skip_cleanup: true
-        on: 
-          tags: true
-          condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
+        # on: 
+        #   tags: true
+        #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
       
 
