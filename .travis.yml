@@ -13,7 +13,7 @@ before_install:
   
 
 install:
-  - cp .npmrc.release $HOME/.npmrc
+  - ls && cp .npmrc.release $HOME/.npmrc
   #build runner
   - yarn run bootstrap
 
