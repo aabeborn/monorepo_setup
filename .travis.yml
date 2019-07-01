@@ -21,7 +21,7 @@ install:
 before_deploy: 
   - "echo cacio"
   - yarn run build
-  - cd packages/prova/build
+  - ./buildpath.sh
   - ls -latr
 jobs:
   include:
