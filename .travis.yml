@@ -24,10 +24,11 @@ jobs:
   include:
     # - stage: test
     #   script: yarn run test
-    # - stage: build
-    #   script: yarn run build 
-    - stage: deploy ui
-      deploy: 
+     - stage: build
+        script: echo "CACIOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        if: branch != master 
+     - stage: deploy ui
+        deploy: 
         
         #provider: script
         #script: npm whoami && yarn run release
