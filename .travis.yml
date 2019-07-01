@@ -41,5 +41,6 @@ jobs:
         #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
         - provider: pages
           skip_cleanup: true
-          github_token: $GITHUB_TOKEN
-          local_dir: packages/cacio/build
+          provider: firebase
+            token:
+              secure: $FIREBASE_TOKEN
