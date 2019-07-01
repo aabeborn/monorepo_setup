@@ -22,6 +22,7 @@ before_deploy:
   - "echo cacio"
   - yarn run build
   - cd packages/prova/build
+  - ls -latr
 jobs:
   include:
     # - stage: test
