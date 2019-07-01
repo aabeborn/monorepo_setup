@@ -40,5 +40,5 @@ jobs:
         #   tags: true
         #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
         provider: firebase
-          token:
-            secure: $FIREBASE_TOKEN
+        token:
+          secure: $FIREBASE_TOKEN
