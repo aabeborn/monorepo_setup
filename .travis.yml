@@ -24,9 +24,9 @@ jobs:
   include:
     # - stage: test
     #   script: yarn run test
-     - stage: build
-        script: echo "CACIOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-        if: branch != master 
+    #  - stage: build
+    #     script: echo "CACIOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+    #     if: branch != master 
      - stage: deploy ui
         deploy: 
         
@@ -39,6 +39,6 @@ jobs:
         # on: 
         #   tags: true
         #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
-        - provider: firebase
-            token:
-              secure: $FIREBASE_TOKEN
+        provider: firebase
+          token:
+            secure: $FIREBASE_TOKEN
