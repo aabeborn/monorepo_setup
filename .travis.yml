@@ -39,8 +39,6 @@ jobs:
         # on: 
         #   tags: true
         #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
-        - provider: pages
-          skip_cleanup: true
-          provider: firebase
+        - provider: firebase
             token:
               secure: $FIREBASE_TOKEN
