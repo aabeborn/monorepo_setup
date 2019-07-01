@@ -21,6 +21,7 @@ install:
 before_deploy: 
   - "echo cacio"
   - yarn run build
+  - chmod +x buildpath.sh
   - ./buildpath.sh
   - ls -latr
 jobs:
