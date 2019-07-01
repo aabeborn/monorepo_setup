@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/monorepo_setup/static/css/main.2cce8147.chunk.css",
+    "main.js": "/monorepo_setup/static/js/main.ab188535.chunk.js",
+    "main.js.map": "/monorepo_setup/static/js/main.ab188535.chunk.js.map",
+    "runtime~main.js": "/monorepo_setup/static/js/runtime~main.3d63a790.js",
+    "runtime~main.js.map": "/monorepo_setup/static/js/runtime~main.3d63a790.js.map",
+    "static/js/2.a935a316.chunk.js": "/monorepo_setup/static/js/2.a935a316.chunk.js",
+    "static/js/2.a935a316.chunk.js.map": "/monorepo_setup/static/js/2.a935a316.chunk.js.map",
+    "index.html": "/monorepo_setup/index.html",
+    "precache-manifest.384168a9d964ba501eda30050e5ab2c4.js": "/monorepo_setup/precache-manifest.384168a9d964ba501eda30050e5ab2c4.js",
+    "service-worker.js": "/monorepo_setup/service-worker.js",
+    "static/css/main.2cce8147.chunk.css.map": "/monorepo_setup/static/css/main.2cce8147.chunk.css.map",
+    "static/media/logo.svg": "/monorepo_setup/static/media/logo.5d5d9eef.svg"
+  }
+}
