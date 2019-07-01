@@ -28,9 +28,12 @@ jobs:
     #     script: echo "CACIOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     #     if: branch != master 
      - stage: deploy ui
-        deploy: 
-        
-        #provider: script
+       deploy: 
+        provider: firebase
+        token:
+          secure: $FIREBASE_TOKEN
+
+            #provider: script
         #script: npm whoami && yarn run release
         # provider: npm
         # email: "${NPM_EMAIL}"
@@ -39,6 +42,3 @@ jobs:
         # on: 
         #   tags: true
         #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
-        provider: firebase
-        token:
-          secure: $FIREBASE_TOKEN
