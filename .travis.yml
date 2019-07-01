@@ -13,16 +13,13 @@ before_install:
   
 
 install:
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > ./packages/prova/.npmrc
-  - echo "//registry.npmjs.org/:_authToken=\${NPM_TOKEN}" > $HOME/.npmrc
-  - npm whoami
   #build runner
   - yarn run bootstrap
 before_deploy: 
   - "echo cacio"
   - yarn run build
   - chmod +x buildpath.sh
-  - ./buildpath.sh
+  - . ./buildpath.sh
   - ls -latr
 jobs:
   include:
