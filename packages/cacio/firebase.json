@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "packages/cacio/build",
+    "public": "pbuild",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "rewrites": []
   }
