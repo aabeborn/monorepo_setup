@@ -18,7 +18,10 @@ install:
   - npm whoami
   #build runner
   - yarn run bootstrap
-
+before_deploy: 
+  - "echo cacio"
+  - yarn run build
+  - cd packages/prova/build
 jobs:
   include:
     # - stage: test
@@ -27,8 +30,12 @@ jobs:
     #   script: yarn run build 
     - stage: deploy ui
       deploy: 
-        provider: script
-        script: npm whoami && yarn run release
+        
+        #provider: script
+        #script: npm whoami && yarn run release
+        provider: npm
+        email: "${NPM_EMAIL}"
+        api_key: "${NPM_TOKEN}"
         skip_cleanup: true
         # on: 
         #   tags: true
