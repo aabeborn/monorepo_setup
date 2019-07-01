@@ -9,7 +9,8 @@
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"

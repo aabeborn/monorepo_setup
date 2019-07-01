@@ -31,12 +31,14 @@ jobs:
         
         #provider: script
         #script: npm whoami && yarn run release
-        provider: npm
-        email: "${NPM_EMAIL}"
-        api_key: "${NPM_TOKEN}"
-        skip_cleanup: true
+        # provider: npm
+        # email: "${NPM_EMAIL}"
+        # api_key: "${NPM_TOKEN}"
+        # skip_cleanup: true
         # on: 
         #   tags: true
         #   condition: "$TRAVIS_TAG =~ ^@grimtim/prova"
-      
-
+        - provider: pages
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          local_dir: build
