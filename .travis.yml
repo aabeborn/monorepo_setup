@@ -29,6 +29,7 @@ jobs:
     #     if: branch != master 
      - stage: deploy ui
        deploy: 
+        skip_cleanup: true
         provider: firebase
         token:
           secure: $FIREBASE_TOKEN
